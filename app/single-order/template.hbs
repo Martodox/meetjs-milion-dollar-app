@@ -1,0 +1,23 @@
+<h2>Order no: {{model.id}}</h2>
+
+<h3>Manifest</h3>
+<table class="table table-striped table-bordered table-hover">
+
+  <thead>
+    <tr>
+      {{#each headers as |header|}}
+        <th>{{header}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model.manifest as |manifest|}}
+      {{table-row data=manifest}}
+    {{/each}}
+  </tbody>
+
+</table>
+
+
+
+{{#link-to 'orders'}}<button class="btn btn-default">Back to orders</button>{{/link-to}}

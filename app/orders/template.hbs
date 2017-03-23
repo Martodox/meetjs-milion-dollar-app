@@ -1,0 +1,24 @@
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      {{#each headers as |header|}}
+        <th>{{header}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |order|}}
+      {{table-row data=order goToOrder=(action 'goToOrder')}}
+    {{/each}}
+  </tbody>
+</table>
+
+{{#if addNew}}
+
+    {{add-order saveOrder=(action 'saveOrder')}}
+
+{{else}}
+
+    <button {{action 'toggleForm'}} class="btn btn-default">Add new</button>
+
+{{/if}}

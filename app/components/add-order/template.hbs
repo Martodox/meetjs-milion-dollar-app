@@ -1,0 +1,23 @@
+{{#if newOrder.customer}}
+    <h4>Adding new order</h4>
+    <h6>{{newOrder.customer}}</h6>
+    <h6>{{newOrder.netValue}}</h6>
+    <h6>{{newOrder.description}}</h6>
+{{/if}}
+
+<form {{action "newOrder" on="submit"}}>
+    <div class="form-group">
+        <label for="new-customer">Customer</label>
+        {{input class="form-control" id="new-customer" value=newOrder.customer placeholder="Customer"}}
+    </div>
+    <div class="form-group">
+        <label for="new-value">Value</label>
+        {{input class="form-control" id="new-value" value=newOrder.netValue placeholder="Value"}}
+    </div>
+    <div class="form-group">
+        <label for="new-description">Description</label>
+        {{input class="form-control" id="new-description" value=newOrder.description placeholder="Description"}}
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
