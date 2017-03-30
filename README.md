@@ -13,7 +13,7 @@ Meet.js - 30 March 2017
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:Martodox/meetjs-million-dollar-app.git`
 * `cd meetjs-million-dollar-app`
 * `npm install`
 * `bower install`
